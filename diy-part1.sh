@@ -17,8 +17,8 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-sed -i 's/192.168.1.1/10.0.0.1/g' openwrt/package/base-files/files/bin/config_generate
-sed -i 's/192.168./10.0./g' openwrt/package/base-files/files/bin/config_generate
-sed -i '/spi-max-frequency/a\\t\tbroken-flash-reset;' openwrt/target/linux/ramips/dts/mt7621_phicomm_k2p.dts
-sed -i 's/0xf60000/0x1f60000/g' openwrt/target/linux/ramips/dts/mt7621_phicomm_k2p.dts
-sed -i 's/15744k/32448k/g' openwrt/target/linux/ramips/image/mt7621.mk
+sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168./10.0./g' package/base-files/files/bin/config_generate
+sed -i '/spi-max-frequency/a\\t\tbroken-flash-reset;' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
+sed -i 's/0xf60000/0x1f60000/g' target/linux/ramips/dts/mt7621_phicomm_k2p.dts
+sed -i 's/15744k/32448k/g' target/linux/ramips/image/mt7621.mk
